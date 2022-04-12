@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Customer from "../Containers/Customer";
 import FloorConfig from "../Containers/FloorConfig";
 import OyoPanel from "../Containers/OyoPanel";
@@ -21,6 +21,7 @@ const Router = () => {
           <Route path={RoutePaths.OyoPanel} element={<OyoPanel />} />
           <Route path={RoutePaths.FloorUploadLimit} element={<FloorUploadLimit />} />
           <Route path={RoutePaths.FloorConfig} element={<FloorConfig />} />
+          <Route path="*" element={<Navigate to="/Profile" />} />
       </Routes>
   </BrowserRouter>
 };
