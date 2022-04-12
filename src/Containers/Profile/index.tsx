@@ -78,10 +78,6 @@ const Profile: React.FC = () => {
   };
   return (
     <Box className={classes.root}>
-      <Box className={classes.header} component={Paper}>
-        <span className={classes.type1}>{OYOHEADER}</span>
-        <Input className={classes.input} placeholder="Search Property" />
-      </Box>
       <Box className={classes.body}>
         <Box className={classes.bodySection} component={Paper}>
           <Button className={classes.btn1}>US_007</Button>

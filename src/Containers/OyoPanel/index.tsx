@@ -17,6 +17,7 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Header from "../../Components/header";
+import HeaderButton from "../../Components/header/headerButtons";
 import { StyledTableCell, StyledTableRow } from "../../Components/tableRow";
 
 interface floorPrices {
@@ -60,6 +61,7 @@ const OyoPanel: React.FC = () => {
   return (
     <>
       <Header />
+      <HeaderButton />
       <Box className={classes.root}>
         <span className={classes.txt1}>Floor Prices</span>
         <Box className={classes.section1}>
@@ -157,7 +159,7 @@ const OyoPanel: React.FC = () => {
             </Button>
             <Box>
               <span>Page </span>
-              <Input value={1} style={{width: "2rem", textAlign: "center"}} />
+              <Input value={1} style={{ width: "2rem", textAlign: "center" }} />
               <span>of 1</span>
             </Box>
             <FormControl>
@@ -171,12 +173,14 @@ const OyoPanel: React.FC = () => {
                 <MenuItem value={3}>3 row</MenuItem>
               </Select>
             </FormControl>
-            <Button variant="contained" disabled className={classes.btn2}>Next</Button>
+            <Button variant="contained" disabled className={classes.btn2}>
+              Next
+            </Button>
           </Box>
           <Box className={classes.tableABody}>
             <TableContainer>
               <Table>
-                <TableHead component={Paper} >
+                <TableHead component={Paper}>
                   <StyledTableRow>
                     <StyledTableCell align="center">Hotel</StyledTableCell>
                     <StyledTableCell align="center">
@@ -199,15 +203,33 @@ const OyoPanel: React.FC = () => {
                   {floorPricesData.map((item, index) => {
                     return (
                       <StyledTableRow key={index}>
-                        <StyledTableCell align="left">{item.hotel}</StyledTableCell>
-                        <StyledTableCell align="left">{item.room_category}</StyledTableCell>
-                        <StyledTableCell align="left">{item.Prices}</StyledTableCell>
-                        <StyledTableCell align="left">{item.Price_From}</StyledTableCell>
-                        <StyledTableCell align="left">{item.Price_Till}</StyledTableCell>
-                        <StyledTableCell align="left">{item.Reason}</StyledTableCell>
-                        <StyledTableCell align="left">{item.Status}</StyledTableCell>
-                        <StyledTableCell align="left">{item.Active_From}</StyledTableCell>
-                        <StyledTableCell align="left">{item.Active_Till}</StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.hotel}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.room_category}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.Prices}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.Price_From}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.Price_Till}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.Reason}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.Status}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.Active_From}
+                        </StyledTableCell>
+                        <StyledTableCell align="left">
+                          {item.Active_Till}
+                        </StyledTableCell>
                       </StyledTableRow>
                     );
                   })}

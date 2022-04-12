@@ -1,16 +1,14 @@
 import { Box, Button, Input, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
+import Header from "../../Components/header";
 import { CUSTOMER_FLOOR, OYOHEADER } from "../../constants/constants";
 
 const Customer: React.FC = () => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Box className={classes.header} component={Paper}>
-        <span className={classes.type1}>{OYOHEADER}</span>
-        <Input className={classes.input} placeholder="Search Property" />
-      </Box>
+      <Header />
       <Box className={classes.body}>
         <Box className={classes.bodySection} component={Paper}>
           <Button className={classes.btn1}>US_007</Button>

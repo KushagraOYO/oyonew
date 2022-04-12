@@ -17,6 +17,7 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Header from "../../Components/header";
+import HeaderButton from "../../Components/header/headerButtons";
 import { StyledTableCell, StyledTableRow } from "../../Components/tableRow";
 
 interface floorUploadLimit {
@@ -51,6 +52,7 @@ const FloorConfig: React.FC = () => {
   return (
     <>
       <Header />
+      <HeaderButton />
       <Box className={classes.root}>
         <Box className={classes.tableBody} component={Paper}>
           <Box className={classes.tableABody}>
